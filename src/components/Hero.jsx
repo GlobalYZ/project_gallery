@@ -8,13 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const images = [
-    '/public/img/portfolio-7.png',
-    '/public/img/portfolio-1.jpg',
-    '/public/img/portfolio-2.jpg',
-    '/public/img/portfolio-3.jpg',
-    '/public/img/portfolio-4.jpg',
-    '/public/img/portfolio-5.png',
-    '/public/img/portfolio-6.png'
+    '/img/portfolio-7.png',
+    '/img/portfolio-1.jpg',
+    '/img/portfolio-2.jpg',
+    '/img/portfolio-3.jpg',
+    '/img/portfolio-4.jpg',
+    '/img/portfolio-5.png',
+    '/img/portfolio-6.png'
   ];
 
   const [mouseDownAt, setMouseDownAt] = useState("0");

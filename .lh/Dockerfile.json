@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Dockerfile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1735254861324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735254870747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+# 构建阶段\r\n+FROM node:20-alpine as build\r\n+\r\n+# 设置工作目录\r\n+WORKDIR /app\r\n+\r\n+# 复制package.json和package-lock.json（如果存在）\r\n+COPY package*.json ./\r\n+\r\n+# 安装依赖\r\n+RUN npm install\r\n+\r\n+# 复制源代码\r\n+COPY . .\r\n+\r\n+# 构建应用\r\n+RUN npm run build\r\n+\r\n+# 生产阶段\r\n+FROM nginx:alpine\r\n+\r\n+# 复制构建产物到nginx目录\r\n+COPY --from=build /app/dist /usr/share/nginx/html\r\n+\r\n+# 暴露80端口\r\n+EXPOSE 80\r\n+\r\n+# 启动nginx\r\n+CMD [\"nginx\", \"-g\", \"daemon off;\"]\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1735254861324,
+            "name": "Commit-0",
+            "content": "# 构建阶段\r\nFROM node:20-alpine as build\r\n\r\n# 设置工作目录\r\nWORKDIR /app\r\n\r\n# 复制package.json和package-lock.json（如果存在）\r\nCOPY package*.json ./\r\n\r\n# 安装依赖\r\nRUN npm install\r\n\r\n# 复制源代码\r\nCOPY . .\r\n\r\n# 构建应用\r\nRUN npm run build\r\n\r\n# 生产阶段\r\nFROM nginx:alpine\r\n\r\n# 复制构建产物到nginx目录\r\nCOPY --from=build /app/dist /usr/share/nginx/html\r\n\r\n# 暴露80端口\r\nEXPOSE 80\r\n\r\n# 启动nginx\r\nCMD [\"nginx\", \"-g\", \"daemon off;\"] "
+        }
+    ]
+}
