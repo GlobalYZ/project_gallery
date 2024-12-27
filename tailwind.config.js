@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        zentry: ["zentry", "sans-serif"],
+        zentry: ["sans-serif"],
         general: ["general", "sans-serif"],
         "circular-web": ["circular-web", "sans-serif"],
         "robert-medium": ["robert-medium", "sans-serif"],
@@ -24,6 +24,7 @@ export default {
         yellow: {
           100: "#8e983f",
           300: "#edff66",
+          500: "#ffa502",
         },
       },
     },

@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import ImageTrack from "./ImageTrack";
 import { useState, useEffect } from "react";
+import { HERO_STRING } from "../consts/en";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,25 +118,25 @@ const Hero = () => {
           onPercentageChange={handlePercentageChange}
         />
 
-        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>A</b>MING
+        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-white">
+          {HERO_STRING.subtitle}
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-100">
-              redefi<b>n</b>e
+            <h1 className="special-font hero-heading text-white">
+              {HERO_STRING.title}
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
+            <p className="mb-5 max-w-64 font-robert-regular text-white">
+              {HERO_STRING.description}
             </p>
           </div>
         </div>
       </div>
 
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        G<b>A</b>MING
+        {HERO_STRING.subtitle}
       </h1>
     </div>
   );

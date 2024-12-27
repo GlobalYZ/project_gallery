@@ -1,0 +1,30 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1735256991490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735260753474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\r\n   theme: {\r\n     extend: {\r\n       fontFamily: {\r\n-        zentry: [\"zentry\", \"sans-serif\"],\r\n+        zentry: [\"sans-serif\"],\r\n         general: [\"general\", \"sans-serif\"],\r\n         \"circular-web\": [\"circular-web\", \"sans-serif\"],\r\n         \"robert-medium\": [\"robert-medium\", \"sans-serif\"],\r\n         \"robert-regular\": [\"robert-regular\", \"sans-serif\"],\r\n"
+                },
+                {
+                    "date": 1735260771770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\r\n   theme: {\r\n     extend: {\r\n       fontFamily: {\r\n-        zentry: [\"sans-serif\"],\r\n+        // zentry: [\"sans-serif\"],\r\n         general: [\"general\", \"sans-serif\"],\r\n         \"circular-web\": [\"circular-web\", \"sans-serif\"],\r\n         \"robert-medium\": [\"robert-medium\", \"sans-serif\"],\r\n         \"robert-regular\": [\"robert-regular\", \"sans-serif\"],\r\n"
+                },
+                {
+                    "date": 1735260797265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\r\n   theme: {\r\n     extend: {\r\n       fontFamily: {\r\n-        // zentry: [\"sans-serif\"],\r\n+        zentry: [\"sans-serif\"],\r\n         general: [\"general\", \"sans-serif\"],\r\n         \"circular-web\": [\"circular-web\", \"sans-serif\"],\r\n         \"robert-medium\": [\"robert-medium\", \"sans-serif\"],\r\n         \"robert-regular\": [\"robert-regular\", \"sans-serif\"],\r\n"
+                }
+            ],
+            "date": 1735256991490,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\r\nexport default {\r\n  content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\r\n  theme: {\r\n    extend: {\r\n      fontFamily: {\r\n        zentry: [\"zentry\", \"sans-serif\"],\r\n        general: [\"general\", \"sans-serif\"],\r\n        \"circular-web\": [\"circular-web\", \"sans-serif\"],\r\n        \"robert-medium\": [\"robert-medium\", \"sans-serif\"],\r\n        \"robert-regular\": [\"robert-regular\", \"sans-serif\"],\r\n      },\r\n      colors: {\r\n        blue: {\r\n          50: \"#DFDFF0\",\r\n          75: \"#dfdff2\",\r\n          100: \"#F0F2FA\",\r\n          200: \"#010101\",\r\n          300: \"#4FB7DD\",\r\n        },\r\n        violet: {\r\n          300: \"#5724ff\",\r\n        },\r\n        yellow: {\r\n          100: \"#8e983f\",\r\n          300: \"#edff66\",\r\n          500: \"#ffa502\"\r\n        },\r\n      },\r\n    },\r\n  },\r\n  plugins: [],\r\n};\r\n"
+        }
+    ]
+}

@@ -3,10 +3,11 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import { HOME_URL } from "../consts/links";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+// const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -72,18 +73,11 @@ const NavBar = () => {
           {/* Logo and Product button */}
           <div className="flex items-center gap-7">
             <img src="/img/logo.png" alt="logo" className="w-10" />
-
-            <Button
-              id="product-button"
-              title="Products"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-            />
           </div>
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               {navItems.map((item, index) => (
                 <a
                   key={index}
@@ -93,7 +87,15 @@ const NavBar = () => {
                   {item}
                 </a>
               ))}
-            </div>
+            </div> */}
+
+            <Button
+              id="product-button"
+              title="Back to Home"
+              rightIcon={<TiLocationArrow />}
+              containerClass="md:flex hidden items-center justify-center gap-1"
+              href={HOME_URL}
+            />
 
             <button
               onClick={toggleAudioIndicator}
@@ -113,6 +115,7 @@ const NavBar = () => {
                   })}
                   style={{
                     animationDelay: `${bar * 0.1}s`,
+                    backgroundColor: "#e27c2b",
                   }}
                 />
               ))}

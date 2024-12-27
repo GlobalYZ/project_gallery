@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/consts/links.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1735260121435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735260578380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n export const HOME_URL = \"https://www.muyangdev.com/\";\r\n+export const CONTACT_URL = \"https://www.muyangdev.com/#Contact\";\r\n"
+                }
+            ],
+            "date": 1735260121435,
+            "name": "Commit-0",
+            "content": "export const HOME_URL = \"https://www.muyangdev.com/\";"
+        }
+    ]
+}

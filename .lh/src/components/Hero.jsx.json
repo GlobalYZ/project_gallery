@@ -3,11 +3,35 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1735255299758,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735261401066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { useGSAP } from \"@gsap/react\";\r\n import { ScrollTrigger } from \"gsap/all\";\r\n import ImageTrack from \"./ImageTrack\";\r\n import { useState, useEffect } from \"react\";\r\n+import { HERO_STRING } from \"../consts/en\";\r\n \r\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n const Hero = () => {\r\n@@ -123,13 +124,13 @@\n \r\n         <div className=\"absolute left-0 top-0 z-40 size-full\">\r\n           <div className=\"mt-24 px-5 sm:px-10\">\r\n             <h1 className=\"special-font hero-heading text-blue-100\">\r\n-              redefi<b>n</b>e\r\n+              {HERO_STRING.title}\r\n             </h1>\r\n \r\n             <p className=\"mb-5 max-w-64 font-robert-regular text-blue-100\">\r\n-              Enter the Metagame Layer <br /> Unleash the Play Economy\r\n+              {HERO_STRING.description}\r\n             </p>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1735261411672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,9 +135,9 @@\n         </div>\r\n       </div>\r\n \r\n       <h1 className=\"special-font hero-heading absolute bottom-5 right-5 text-black\">\r\n-        G<b>A</b>MING\r\n+        {HERO_STRING.subtitle}\r\n       </h1>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1735261592294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n           onPercentageChange={handlePercentageChange}\r\n         />\r\n \r\n         <h1 className=\"special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75\">\r\n-          G<b>A</b>MING\r\n+          {HERO_STRING.subtitle}\r\n         </h1>\r\n \r\n         <div className=\"absolute left-0 top-0 z-40 size-full\">\r\n           <div className=\"mt-24 px-5 sm:px-10\">\r\n"
+                },
+                {
+                    "date": 1735261859183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,19 +117,19 @@\n           externalPercentage={percentage}\r\n           onPercentageChange={handlePercentageChange}\r\n         />\r\n \r\n-        <h1 className=\"special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75\">\r\n+        <h1 className=\"special-font hero-heading absolute bottom-5 right-5 z-40 text-orange-500\">\r\n           {HERO_STRING.subtitle}\r\n         </h1>\r\n \r\n         <div className=\"absolute left-0 top-0 z-40 size-full\">\r\n           <div className=\"mt-24 px-5 sm:px-10\">\r\n-            <h1 className=\"special-font hero-heading text-blue-100\">\r\n+            <h1 className=\"special-font hero-heading text-orange-500\">\r\n               {HERO_STRING.title}\r\n             </h1>\r\n \r\n-            <p className=\"mb-5 max-w-64 font-robert-regular text-blue-100\">\r\n+            <p className=\"mb-5 max-w-64 font-robert-regular text-orange-500\">\r\n               {HERO_STRING.description}\r\n             </p>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1735261879476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,13 +123,13 @@\n         </h1>\r\n \r\n         <div className=\"absolute left-0 top-0 z-40 size-full\">\r\n           <div className=\"mt-24 px-5 sm:px-10\">\r\n-            <h1 className=\"special-font hero-heading text-orange-500\">\r\n+            <h1 className=\"special-font hero-heading text-white\">\r\n               {HERO_STRING.title}\r\n             </h1>\r\n \r\n-            <p className=\"mb-5 max-w-64 font-robert-regular text-orange-500\">\r\n+            <p className=\"mb-5 max-w-64 font-robert-regular text-white\">\r\n               {HERO_STRING.description}\r\n             </p>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1735261888409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n           externalPercentage={percentage}\r\n           onPercentageChange={handlePercentageChange}\r\n         />\r\n \r\n-        <h1 className=\"special-font hero-heading absolute bottom-5 right-5 z-40 text-orange-500\">\r\n+        <h1 className=\"special-font hero-heading absolute bottom-5 right-5 z-40 text-white\">\r\n           {HERO_STRING.subtitle}\r\n         </h1>\r\n \r\n         <div className=\"absolute left-0 top-0 z-40 size-full\">\r\n"
                 }
             ],
             "date": 1735255299758,

@@ -11,7 +11,7 @@ const ImageTrack = ({
   const [prevPercentage, setPrevPercentage] = useState("0");
   const [percentage, setPercentage] = useState("0");
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized] = useState(false);
 
   useEffect(() => {
     if (externalMouseDownAt !== undefined) {

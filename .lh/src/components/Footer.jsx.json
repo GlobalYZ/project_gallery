@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Footer.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1735281000405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735281112735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   return (\r\n     <footer className=\"w-screen bg-[#5542ff] py-4 text-black\">\r\n       <div className=\"container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row\">\r\n         <p className=\"text-center text-sm font-light md:text-left\">\r\n-          Inspired by 2024\r\n+          Inspired by https://zentry.com/\r\n         </p>\r\n \r\n         <div className=\"flex justify-center gap-4  md:justify-start\">\r\n           {socialLinks.map((link, index) => (\r\n"
+                },
+                {
+                    "date": 1735281149503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { FaDiscord, FaTwitter, FaYoutube, FaMedium } from \"react-icons/fa\";\r\n+import { FaGithub, FaLinkedinnk } from \"react-icons/fa\";\r\n \r\n const socialLinks = [\r\n   { href: \"https://discord.com\", icon: <FaDiscord /> },\r\n   { href: \"https://twitter.com\", icon: <FaTwitter /> },\r\n"
+                }
+            ],
+            "date": 1735281000405,
+            "name": "Commit-0",
+            "content": "import { FaDiscord, FaTwitter, FaYoutube, FaMedium } from \"react-icons/fa\";\r\n\r\nconst socialLinks = [\r\n  { href: \"https://discord.com\", icon: <FaDiscord /> },\r\n  { href: \"https://twitter.com\", icon: <FaTwitter /> },\r\n  { href: \"https://youtube.com\", icon: <FaYoutube /> },\r\n  { href: \"https://medium.com\", icon: <FaMedium /> },\r\n];\r\n\r\nconst Footer = () => {\r\n  return (\r\n    <footer className=\"w-screen bg-[#5542ff] py-4 text-black\">\r\n      <div className=\"container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row\">\r\n        <p className=\"text-center text-sm font-light md:text-left\">\r\n          Inspired by \r\n        </p>\r\n\r\n        <div className=\"flex justify-center gap-4  md:justify-start\">\r\n          {socialLinks.map((link, index) => (\r\n            <a\r\n              key={index}\r\n              href={link.href}\r\n              target=\"_blank\"\r\n              rel=\"noopener noreferrer\"\r\n              className=\"text-black transition-colors duration-500 ease-in-out hover:text-white\"\r\n            >\r\n              {link.icon}\r\n            </a>\r\n          ))}\r\n        </div>\r\n\r\n        <a\r\n          href=\"#privacy-policy\"\r\n          className=\"text-center text-sm font-light hover:underline md:text-right\"\r\n        >\r\n          Privacy Policy\r\n        </a>\r\n      </div>\r\n    </footer>\r\n  );\r\n};\r\n\r\nexport default Footer;\r\n"
+        }
+    ]
+}
