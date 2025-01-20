@@ -109,10 +109,97 @@ export const BentoCard = ({ src, title, description, isLinked }) => {
   );
 };
 
-const Features = () => (
-  <section className="bg-black pb-52">
-    <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
+const Features = () => {
+  if (document.documentElement.clientWidth < 768) {
+    const className = "border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md"
+    return (<section className="bg-black pb-24">
+      <div className="container mx-auto px-3 md:px-10 flex justify-center flex-col">
+        <div className="px-5 py-32">
+        <p className="font-circular-web text-lg text-blue-50">
+          {FEATURES_STRING.title}
+        </p>
+        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
+          {FEATURES_STRING.description}
+        </p>
+      </div>
+
+      <BentoTilt className={className}>
+        <BentoCard
+          src="videos/feature-1.mp4"
+          title={
+            <>
+              {FEATURES_STRING.feature1.title}
+            </>
+          }
+          description={FEATURES_STRING.feature1.description}
+        />
+      </BentoTilt>
+
+        <BentoTilt className={className}>
+          <BentoCard
+            src="videos/feature-2.mp4"
+            title={
+              <>
+                {FEATURES_STRING.feature2.title}
+              </>
+            }
+            description={FEATURES_STRING.feature2.description}
+          />
+        </BentoTilt>
+
+        <BentoTilt className={className}>
+          <BentoCard
+            src="videos/feature-3.mp4"
+            title={
+              <>
+                {FEATURES_STRING.feature3.title}
+              </>
+            }
+            description={FEATURES_STRING.feature3.description}
+          />
+        </BentoTilt>
+
+        <BentoTilt className={className}>
+          <BentoCard
+            src="videos/feature-4.mp4"
+            title={
+              <>
+                {FEATURES_STRING.feature4.title}
+              </>
+            }
+            description={FEATURES_STRING.feature4.description}
+          />
+        </BentoTilt>
+
+        <BentoTilt className={className}>
+          <BentoCard
+            src="videos/feature-5.mp4"
+            title={
+              <>
+                {FEATURES_STRING.feature5.title}
+              </>
+            }
+            description={FEATURES_STRING.feature5.description}
+          />
+        </BentoTilt>
+
+        <BentoTilt className={className}>
+          <div className="flex size-full flex-col justify-between bg-orange-300 p-5">
+            <h1 className="bento-title special-font max-w-64 text-black">
+              More coming soon
+            </h1>
+
+            <TiLocationArrow className="text-black m-5 scale-[5] self-end" />
+          </div>
+        </BentoTilt>
+      </div>
+  </section>)
+  }
+
+  return (
+    <section className="bg-black pb-52">
+      <div className="container mx-auto px-3 md:px-10">
+        <div className="px-5 py-32">
         <p className="font-circular-web text-lg text-blue-50">
           {FEATURES_STRING.title}
         </p>
@@ -194,6 +281,6 @@ const Features = () => (
       </div>
     </div>
   </section>
-);
+)};
 
 export default Features;
