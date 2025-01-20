@@ -27,6 +27,23 @@ const About = () => {
     });
   });
 
+  if (document.documentElement.clientWidth < 768) {
+    return (
+      <div id="about" className="w-screen">
+      <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
+        <p className="font-general text-sm uppercase md:text-[10px]">
+          {ABOUT_STRING.welcome}
+        </p>
+
+        <AnimatedTitle
+          title={ABOUT_STRING.title}
+          containerClass="mt-5 !text-black text-center"
+        />
+      </div>
+      </div>
+    );
+  }
+
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
