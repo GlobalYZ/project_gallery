@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { FEATURES_STRING } from "../consts/en";
+import useWindowSize from "../hooks/useWindowSize";
 
 export const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -77,7 +78,7 @@ export const BentoCard = ({ src, title, description, isLinked }) => {
         }}
       />
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-white">
-        <div className="bg-slate-500 bg-opacity-50 w-full md:w-[60%]">
+        <div className="bg-slate-500 bg-opacity-50 w-full">
           <h1 className="bento-title special-font">{title}</h1>
           {description && (
             <p className="p-3 text-xs md:text-base text-justify">{description}</p>
@@ -110,7 +111,8 @@ export const BentoCard = ({ src, title, description, isLinked }) => {
 };
 
 const Features = () => {
-  if (document.documentElement.clientWidth < 768) {
+  const { width } = useWindowSize();
+  if (width < 768) {
     const className = "border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md"
     return (<section className="bg-black pb-24">
       <div className="container mx-auto px-3 md:px-10 flex justify-center flex-col">
@@ -194,93 +196,96 @@ const Features = () => {
         </BentoTilt>
       </div>
   </section>)
+  } else {
+    return (
+      <section className="bg-black pb-52">
+        <div className="container mx-auto px-3 md:px-10">
+          <div className="px-5 py-32">
+          <p className="font-circular-web text-lg text-blue-50">
+            {FEATURES_STRING.title}
+          </p>
+          <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
+            {FEATURES_STRING.description}
+          </p>
+        </div>
+  
+        <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+          <BentoCard
+            src="videos/feature-1.mp4"
+            title={
+              <>
+                {FEATURES_STRING.feature1.title}
+              </>
+            }
+            description={FEATURES_STRING.feature1.description}
+          />
+        </BentoTilt>
+  
+        <div className="grid h-[200vh] md:h-[135vh] w-full grid-cols-2 md:grid-cols-2 grid-rows-4 md:grid-rows-3 gap-7">
+          <BentoTilt className="bento-tilt_1 row-span-1 col-span-2 md:col-span-1 md:row-span-2">
+            <BentoCard
+              src="videos/feature-2.mp4"
+              title={
+                <>
+                  {FEATURES_STRING.feature2.title}
+                </>
+              }
+              description={FEATURES_STRING.feature2.description}
+            />
+          </BentoTilt>
+  
+          <BentoTilt className="bento-tilt_1 row-span-1 col-span-2 md:col-span-1 md:ms-0">
+            <BentoCard
+              src="videos/feature-3.mp4"
+              title={
+                <>
+                  {FEATURES_STRING.feature3.title}
+                </>
+              }
+              description={FEATURES_STRING.feature3.description}
+            />
+          </BentoTilt>
+  
+          <BentoTilt className="bento-tilt_1 me-14 col-span-2 md:col-span-1 md:me-0">
+            <BentoCard
+              src="videos/feature-4.mp4"
+              title={
+                <>
+                  {FEATURES_STRING.feature4.title}
+                </>
+              }
+              description={FEATURES_STRING.feature4.description}
+            />
+          </BentoTilt>
+  
+          <BentoTilt className="bento-tilt_2 row-span-1 col-span-2 md:col-span-1">
+            <div className="flex size-full flex-col justify-between bg-orange-300 p-5">
+              <h1 className="bento-title special-font max-w-64 text-black">
+                More coming soon
+              </h1>
+  
+              <TiLocationArrow className="text-black m-5 scale-[5] self-end" />
+            </div>
+          </BentoTilt>
+  
+          <BentoTilt className="bento-tilt_2 row-span-1 col-span-2 md:col-span-1">
+            <BentoCard
+              src="videos/feature-5.mp4"
+              title={
+                <>
+                  {FEATURES_STRING.feature5.title}
+                </>
+              }
+              description={FEATURES_STRING.feature5.description}
+            />
+          </BentoTilt>
+        </div>
+      </div>
+    </section>
+  )
+
   }
 
-  return (
-    <section className="bg-black pb-52">
-      <div className="container mx-auto px-3 md:px-10">
-        <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
-          {FEATURES_STRING.title}
-        </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          {FEATURES_STRING.description}
-        </p>
-      </div>
-
-      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
-        <BentoCard
-          src="videos/feature-1.mp4"
-          title={
-            <>
-              {FEATURES_STRING.feature1.title}
-            </>
-          }
-          description={FEATURES_STRING.feature1.description}
-        />
-      </BentoTilt>
-
-      <div className="grid h-[200vh] md:h-[135vh] w-full grid-cols-2 md:grid-cols-2 grid-rows-4 md:grid-rows-3 gap-7">
-        <BentoTilt className="bento-tilt_1 row-span-1 col-span-2 md:col-span-1 md:row-span-2">
-          <BentoCard
-            src="videos/feature-2.mp4"
-            title={
-              <>
-                {FEATURES_STRING.feature2.title}
-              </>
-            }
-            description={FEATURES_STRING.feature2.description}
-          />
-        </BentoTilt>
-
-        <BentoTilt className="bento-tilt_1 row-span-1 col-span-2 md:col-span-1 md:ms-0">
-          <BentoCard
-            src="videos/feature-3.mp4"
-            title={
-              <>
-                {FEATURES_STRING.feature3.title}
-              </>
-            }
-            description={FEATURES_STRING.feature3.description}
-          />
-        </BentoTilt>
-
-        <BentoTilt className="bento-tilt_1 me-14 col-span-2 md:col-span-1 md:me-0">
-          <BentoCard
-            src="videos/feature-4.mp4"
-            title={
-              <>
-                {FEATURES_STRING.feature4.title}
-              </>
-            }
-            description={FEATURES_STRING.feature4.description}
-          />
-        </BentoTilt>
-
-        <BentoTilt className="bento-tilt_2 row-span-1 col-span-2 md:col-span-1">
-          <div className="flex size-full flex-col justify-between bg-orange-300 p-5">
-            <h1 className="bento-title special-font max-w-64 text-black">
-              More coming soon
-            </h1>
-
-            <TiLocationArrow className="text-black m-5 scale-[5] self-end" />
-          </div>
-        </BentoTilt>
-
-        <BentoTilt className="bento-tilt_2 row-span-1 col-span-2 md:col-span-1">
-          <BentoCard
-            src="videos/feature-5.mp4"
-            title={
-              <>
-                {FEATURES_STRING.feature5.title}
-              </>
-            }
-            description={FEATURES_STRING.feature5.description}
-          />
-        </BentoTilt>
-      </div>
-    </div>
-  </section>
-)};
+  };
 
 export default Features;
