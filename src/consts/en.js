@@ -1,8 +1,7 @@
 export const HERO_STRING = {
-  title: "Development ",
+  title: "Project",
   subtitle: "Gallery",
-  description:
-    "My passion for web and mobile development inspires me to always explore the new tools and technologies, ensuring my skills remain sharp and my work stays innovative..",
+  description: "",
 };
 
 export const ABOUT_STRING = {
